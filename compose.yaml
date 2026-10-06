@@ -1,0 +1,31 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD in .env}
+      MYSQL_DATABASE: prisma
+      MYSQL_USER: prisma_app
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD in .env}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+  api:
+    build: .
+    environment:
+      PRISMA_MYSQL: "Server=mysql;Database=prisma;User ID=prisma_app;Password=${MYSQL_PASSWORD};SslMode=None"
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+      PRISMA_ADMIN_TOKEN: ${PRISMA_ADMIN_TOKEN:-}
+      AllowedHosts: localhost;127.0.0.1;10.0.2.2
+    ports:
+      - "127.0.0.1:5080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  mysql-data:

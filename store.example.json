@@ -1,0 +1,14 @@
+{
+  "STORE_READY": true,
+  "ADS_ENABLED": true,
+  "LIVE_ADS": true,
+  "ANDROID_ADMOB_APP_ID": "",
+  "ANDROID_REWARDED_ID": "",
+  "IOS_ADMOB_APP_ID": "",
+  "IOS_REWARDED_ID": "",
+  "PRIVACY_URL": "",
+  "SUPPORT_URL": "",
+  "SUPPORT_EMAIL": "",
+  "IAP_ENABLED": false,
+  "PRISMA_API": ""
+}

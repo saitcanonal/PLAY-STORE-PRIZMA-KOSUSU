@@ -1,0 +1,34 @@
+name: prisma_kosusu
+description: Tek parmakla oynanan renkli 3D parkur oyunu.
+publish_to: 'none'
+version: 12.0.0+16
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+  flutter: '>=3.41.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.4.2
+  shared_preferences: ^2.5.3
+  google_mobile_ads: ^5.2.0
+  url_launcher: 6.3.2
+  in_app_purchase: 3.3.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/
+  fonts:
+    - family: Prisma
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto-Black.ttf
+          weight: 900

@@ -1,0 +1,11 @@
+V11 doğrulama
+
+Dart analyze: No issues found.
+Flutter test çalıştırıcısı: 47 başarılı kontrol, 0 hata (45 test ve kurulum/temizleme).
+Dart/C# koşu uyumu: V13 için 21, önceki V12 için 21.
+C# kaynakları: nullable açık, uyarılar hata kabul edilerek derlendi.
+Güvenli rota: 5 seed x 15 dakika, hasar yok.
+Büyük kapılar: 40 seed x 7 dakika, kaçış açık.
+20/60/120 FPS: aynı simülasyon sonucu.
+
+Native iOS/Android build, fiziksel cihaz, canlı reklam/ödeme ve MySQL entegrasyonu bu ortamda çalıştırılmadı.
